@@ -6,6 +6,10 @@ html{
     padding: 0;
     box-sizing: border-box;
 }
+/*Chrome safari Opera*/
+ body::-webkit-scrollbar{
+     display: none;
+ }
 
 a {
     text-decoration: none;
@@ -133,33 +137,47 @@ nav.scroll{
 .workstore-background{
     background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.789) 50%, rgba(116, 88, 51, 0.104)), url(./images/workshop-store-low-2.jpg);
     background-size: cover;
+    display: flex;
+    justify-content: center;
     background-repeat: no-repeat;
     background-position: left;
-    min-height: 80vh;
+    min-height: 100vh;
 }
 
 .workstore-main-container{
-    display:block;
+    display:flex;
+    margin:auto;
+    width: 50%;
+    min-height: 90vh;
     /*padding:7% 50% 20% 5%;*/
-    padding: 10% 50% 20% 5%;
+    /*padding: 10% 50% 20% 5%;*/
 }
 
 .workstore-main-child{
    
     color: #FFEFD5;
-    text-align: center;
-    line-height: 1.5;
-    font-family: 'source Sans Pro', sans-serif;
-    font-size: 1.3em;
+text-align: center;
+line-height: 1.7;
+font-family: 'source Sans Pro', sans-serif;
+font-size: 1.3em;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-evenly;
     
+}
+.workstore-main-child p{
+    width: 80%;
 }
 
 .workstore-main-child h3{
     font-family:'Lobster Two', cursive, sans-serif;
     letter-spacing: 3px;
-    font-size: 3em;
+    font-size: 4em;
     font-weight: normal;
-    padding-bottom: 12%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    /*padding-bottom: 12%;*/
     text-shadow: 3px 2px 3px rgba(255,255,255,.2), 4px 4px 6px rgba(0,0,0,0.57);
 }
 
@@ -226,7 +244,7 @@ nav.scroll{
 }
 
 .raw-material{
-    min-height: 100vh;
+    /*min-height: 100vh;*/
     border-top: #FFEFD5 2px solid ;
     background-color: #293239;
 }
@@ -290,123 +308,31 @@ nav.scroll{
     line-height: 40px;
     font-family: 'source Sans Pro', sans-serif;
     font-size: 1.5em;
-
 }
 
-.product-grid{
-    margin-bottom: -1px;
-    height: 200vh;
+.gallery-parent{
+    background-color: #293239;
+    padding:20px 0px;
+    display: flex;
+}
+
+.gallery{
+    margin: auto;
+    width: 90%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
-    "jewelry1 jewelry2 jewelry3"
-    "jewelry4 jewelry5 jewelry6"
-    "jewelry7 jewelry8 jewelry9"
-    "jewelry10 jewelry11 jewelry12"
-    "jewelry13 jewelry14 jewelry15";
+    grid-template-columns:repeat(auto-fill, 450px);
+    justify-content: center;
 }
-
-.jewelry1,
-.jewelry2,
-.jewelry3,
-.jewelry4,
-.jewelry5,
-.jewelry6,
-.jewelry7,
-.jewelry8,
-.jewelry9,
-.jewelry10,
-.jewelry11,
-.jewelry12,
-.jewelry13,
-.jewelry14,
-.jewelry15 {
-background:#293239;
-color: #FFEFD5;
-display:flex;
-align-items: center;
-justify-content: space-around;
-
-}
-.jewelry1-child,
-.jewelry2-child,
-.jewelry3-child,
-.jewelry4-child,
-.jewelry5-child,
-.jewelry6-child,
-.jewelry7-child,
-.jewelry8-child,
-.jewelry9-child,
-.jewelry10-child,
-.jewelry11-child,
-.jewelry12-child,
-.jewelry13-child,
-.jewelry14-child,
-.jewelry15-child{
-height: 300px;
-width: 450px;
-background-repeat: no-repeat;
-box-shadow: 6px 6px 12px 0px rgba(0,0,0,0.58);
-background-position:center;
-background-size:cover;
-}
-
-.jewelry1-child{
-background-image: url(./images/Produkter/ProdukterNy/spjuthalsaband_4500x3000.jpg);
-}
-.jewelry2-child{
-background-image: url(./images/Produkter/ProdukterNy/månhalsband_3990x3000.jpg);
-}
-
-.jewelry3-child{
-background-image:url(./images/Produkter/ProdukterNy/stenhalsband_4500x3000.jpg);
-
-}
-.jewelry4-child{
-    background-image: url(./images/Produkter/ProdukterNy/4hornhalsband.jpg);   
-}
-.jewelry5-child{
-    background-image: url(./images/Produkter/ProdukterNy/5krossadstenhalsband.jpg);
+.gallery img{
+    /* border: solid 1px hotpink; */
+    padding: 0px 30px;
+    margin: 50px 0px;
+    object-fit: cover;
+    width: 450px; 
+    height: 250px;
     
-}
-.jewelry6-child{
-    background-image: url(./images/Produkter/ProdukterNy/6dörmfångarörhängen.jpg);
-    
-}
-.jewelry7-child{
-    background-image: url(./images/Produkter/ProdukterNy/7stenguldhalsband.jpg);
-}
-.jewelry8-child{
-    background-image: url(./images/Produkter/ProdukterNy/8svartläderarmband.jpg);
-}
-.jewelry9-child{
-    background-image: url(./images/Produkter/ProdukterNy/9bruntläderarmband.jpg);
-    
-}
-.jewelry10-child{
-    background-image: url(./images/Produkter/ProdukterNy/10blåring.jpg);
-   
-}
-.jewelry11-child{
-    background-image: url(./images/Produkter/ProdukterNy/11vitring.jpg);
-}
-.jewelry12-child{
-    background-image: url(./images/Produkter/ProdukterNy/12lilahalsband3.jpg)
-}
-.jewelry13-child{
-    background-image: url(./images/Produkter/ProdukterNy/svartareläderpåse_5246X3630.jpg);
-   
-}
-.jewelry14-child{
-    background-image: url(./images/Produkter/ProdukterNy/färgad_läderpåsa_3875x3000.jpg);
-}
-.jewelry15-child{
-    background-image: url(./images/Produkter/ProdukterNy/ölghalsband\ kollage_2.jpg);
-}
 
-
-
+}
 
 /**********************WORKSHOP*****************/
 
@@ -436,10 +362,11 @@ font-weight: normal;
 }
 
 .workshop-main-content{
-    padding: 0% 35% 0% 35%;
     color:#FFEFD5;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: normal;
+    width: 50%;
+    margin: auto;
     
 }
 
@@ -483,6 +410,8 @@ font-weight: normal;
     
  } 
  .creditCopyText{
+     position: absolute;
+     bottom: -0;
     color: #ffefd55b;
     margin: 3% 0% 0% 1%;
     font-size: 0.8em;
@@ -550,7 +479,9 @@ footer{
 
 
 
-/**********  FOR MOBILE****************/
+
+
+/**********  RESPONSIVE****************/
 
 
 
@@ -558,6 +489,12 @@ footer{
     .nav-links {
         width: 33%;
     }
+
+
+    .workstore-main-child p{
+        width: 100%;
+    }
+
 }    
 
 @media screen and (max-width:950px){
@@ -604,52 +541,57 @@ footer{
 .nav-active{
     transform: translateX(0%);
 }
-@media screen and (min-width:900px){
+@media screen and (min-width:1100px){
     .no-webb{
         display: none;
     }
 }
+/*******IPAD***********/
+@media screen and (max-width:1024px){
 
-
-@media screen and (max-width:900px){
-    
-    .nav-links{
-        height: 30vh;
+    .workstore-main-container{
+        width: 85%;
     }
-    
-    .logo {
-        color:#FFEFD5;
-        letter-spacing: 3px;
-        font-size: 1.5em; 
-        }
-
 
     .home-main {
-    background:linear-gradient(0deg, rgba(0, 0, 0, 0.589) 100%, rgba(0, 0, 0, 0.589) 100%), url(./images/Produkter/IMG_20200331_205620_01.jpg);
-    background-size: cover;
-            
+        background:linear-gradient(0deg, rgba(0, 0, 0, 0.589) 100%, rgba(0, 0, 0, 0.589) 100%), url(./images/Produkter/IMG_20200331_205620_01.jpg);
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
 
-        }
+    }
 
-      .home-main-head{
-          padding-top: 40%;
-          font-size: 2em;
-      }
+    .home-main{
+        width: 100%;
+        display: flex;
+    }
 
-      .home-main-text{
-        font-size: 1.3em;
-        padding:10% 5% 0% 5%;
-        font-weight: bolder;
-      }
-      
-    /**********FOOTER*************/
+    .home-main-head{
+        padding: 0%;
 
+    }
+
+    .home-main-text{
+        font-weight: 600;
+        line-height: 1.5;
+        padding: 0%;
+        width: 70%;
+    }
+
+    
+    ul.nav-links,
+    ul.nav-links.nav-active {
+        height: 30vh;
+        margin-top: -20px;
+    }
     .no-mobile{
         display: none;
     }
 
     .footer-mobile {
-     height: 20vh;
+     min-height: 20vh;
     }
        
     .footer-container{
@@ -671,21 +613,25 @@ footer{
     .footer-address{
         font-size: 1.2em;
         margin:5% 5% 0% 5%;
+        margin-bottom: 10px;
         border: none;
     
     }
-    .social-media-mobile{
+    /* .social-media-mobile{
       height: 10vh;
-      background: #181e22;
+      background: #181e22; */
    
-    }
-    .social-media-list-mobile{
+    
+    .social-media-list-mobile {
+        background-color: #181e22;
         width: 100%;
         height: 10vh;
         display: flex;
-        align-items: center;
         justify-content: space-around;
+        align-items: center;
     }
+
+   
 
    
 
@@ -697,4 +643,282 @@ footer{
    
     }
     
+}
+
+
+@media screen and (max-width:830px) {
+    .gallery-parent{
+        padding: 0px;
+
+    }
+
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery img{
+        width: 100%;
+        height: auto;
+    }
+
+    .product-desc{
+        padding: 0px;
+        width: 80%;
+        margin: auto;
+        margin-top: 10%;
+        font-size: 1.4em;
+
+    }
+
+    .product-header{
+        padding-top: 20%;
+    }
+    .workshop-main-content{
+        width: 70%;
+    }
+
+}
+
+
+/*************************/
+
+@media screen and (max-width:600px){
+
+    
+    .nav-links{
+        height: 30vh;
+    }
+    
+    .logo {
+        color:#FFEFD5;
+        letter-spacing: 3px;
+        font-size: 1.5em; 
+        }
+
+
+    .home-main {
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.589) 100%, rgba(0, 0, 0, 0.589) 100%), url(./images/Produkter/IMG_20200331_205620_01.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+            
+
+        }
+
+      .home-main-head{
+        font-size: 2.5em;
+      }
+
+      .home-main-text{
+        font-size: 1.2em;
+        width: 100%;
+        padding: 0% 5%;
+      }
+      
+
+/***************BUTIK***************************/
+
+
+.workstore-main-container{
+    display:flex;
+    justify-items: center;
+}
+
+.workstore-main-child{
+    height: 70%;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+}
+.workstore-main-child p{
+    width: 100%;
+    
+}
+
+.workstore-office{
+    height: 110vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "block1"
+    "block2"
+}
+.workstore-main-child h3{
+    margin-bottom: 5px;
+    margin-top: 80px;
+}
+
+.raw-material{
+    display: flex;
+    justify-content: center;
+    height: 60vh;
+}
+
+.raw-material-container{
+height: auto;
+}
+
+.raw-material-child{
+    display: flex;
+    margin: auto;
+    width: 100vw;
+    height:calc(100vw * 11/16);
+}
+.container-materials{
+    height: 100%;
+    width: 30%;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+.materals{
+   margin: auto;
+   font-size: 190%;
+}
+
+.workshop-main-header{
+    font-size: 3.5em;
+    white-space: nowrap;
+}
+    
+
+    /**********FOOTER*************/
+
+    .no-mobile{
+        display: none;
+    }
+
+    .footer-mobile {
+     min-height: 20vh;
+    }
+       
+    .footer-container{
+    display: block; float: left;
+    align-items:flex-start;
+    
+       
+    }
+
+    .footer-logo{
+        font-size: 2.5em;
+        letter-spacing: 2px;
+        border: none;
+        margin-left: 5%;
+    }
+ 
+
+
+    .footer-address{
+        font-size: 1.2em;
+        margin:5% 5% 0% 5%;
+        margin-bottom: 10px;
+        border: none;
+    
+    }
+    /* .social-media-mobile{
+      height: 10vh;
+      background: #181e22; */
+   
+    
+    .social-media-list-mobile {
+        background-color: #181e22;
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+   
+
+   
+
+    .fa-facebook,
+    .fa-instagram,
+    .fa-envelope {
+    color: #FFEFD5;
+    font-size: 2.3em;
+   
+    }
+    
+}
+
+/************FOR MOBILE*******************/
+
+@media screen and (max-width:420px) {
+
+
+    .home-main-head{
+        font-size: 2em;
+        padding-top: 85px;
+        text-align: center;
+    }
+
+
+    
+    .workstore-main-container{
+        display: flex;
+        justify-content: center;
+        height: 800px;
+        
+    }
+    
+    .workstore-main-child{
+        height: 70vh;
+        display: flex;
+    }
+
+    .workstore-main-child p{
+        height: 100%;
+        width: inherit;
+        font-size: 73%;
+        font-weight: bolder;
+    }
+
+
+    .workstore-office { 
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .raw-material{
+     height: 66vh;
+    }
+
+    .raw-material-container{
+        height: 40vh;
+        margin: auto;
+    }
+
+
+/*******WORKSHOP********/
+
+.workshop-main-header{
+    padding: 30% 0%;
+    font-size: 40px;
+}
+
+.workshop-main-content{
+    padding: 5%;
+    font-size: 12px;
+}
+
+
+
+
+
+}
+
+@media screen and (max-width:340px) {
+
+    .workstore-background{
+        height: 170vh;
+    }
+
+    .workstore-main-child h3{
+        margin-top: 5px;
+    }
+
 }

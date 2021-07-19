@@ -15,7 +15,12 @@ window.onscroll = function() {
     const top = window.scrollY;
     if (top >= 150){
         header.classList.add('scroll')
+        header.addEventListener('mouseover',() =>{
+            header.classList.remove('scroll');
+        })
     } else {
         header.classList.remove('scroll');
     }
 }
+
+
